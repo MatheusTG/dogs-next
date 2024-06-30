@@ -1,0 +1,16 @@
+.header {
+  padding: 0 1rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.login {
+  display: flex;
+  gap: 0.5rem;
+}
