@@ -1,8 +1,11 @@
+"use client";
+
 import useForm from "@/hooks/useForm";
 import styles from "./login.module.css";
+import Input from "@/components/Input";
 
-export default async function LoginPage() {
-  const user = useForm();
+export default function LoginPage() {
+  const user = useForm("email");
 
   return (
     <main className={styles.login}>
@@ -11,8 +14,7 @@ export default async function LoginPage() {
         <h1 className="title">Login</h1>
         <form action="">
           <div>
-            <label htmlFor="user">Usuário</label>
-            <input type="text" id="user" name="user" onChange={user.onChange} />
+            <Input label="Usuário" id="user" />
           </div>
         </form>
       </div>
