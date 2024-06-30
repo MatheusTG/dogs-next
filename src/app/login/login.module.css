@@ -1,0 +1,16 @@
+.login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.imagemDog {
+  height: calc(100vh);
+  background: url('/assets/login.jpg') no-repeat 50%;
+  background-size: cover;
+}
+
+.loginContent {
+  margin-top: 20vh;
+  padding: 1rem;
+}
