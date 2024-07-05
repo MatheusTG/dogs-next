@@ -1,9 +1,9 @@
 import { Spectral } from "next/font/google";
 
-export const fontTitle = Spectral({
+export const TypeSecond = Spectral({
   weight: ["700"],
-  style: ["normal"],
   subsets: ["latin"],
+  style: ["normal"],
+  variable: "--type-second",
   display: "swap",
-  variable: '--font-title'
 });

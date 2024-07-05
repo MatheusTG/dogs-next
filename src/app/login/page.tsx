@@ -6,7 +6,8 @@ import Input from "@/components/Form/Input";
 import Button from "@/components/Form/Button";
 
 export default function LoginPage() {
-  const user = useForm("email");
+  const user = useForm();
+  const password = useForm();
 
   return (
     <main className={styles.login}>
@@ -14,8 +15,22 @@ export default function LoginPage() {
       <div className={styles.loginContent}>
         <h1 className="title">Login</h1>
         <form action="" className={styles.form}>
-          <Input label="Usuário" id="user" />
-          <Input label="Senha" id="password" />
+          <Input
+            label="Usuário"
+            error={user.error}
+            id="user"
+            value={user.value}
+            onChange={user.onChange}
+            onBlur={user.onBlur}
+          />
+          <Input
+            label="Senha"
+            error={password.error}
+            id="password"
+            value={password.value}
+            onChange={password.onChange}
+            onBlur={password.onBlur}
+          />
           <Button type="submit">Entrar</Button>
         </form>
 
