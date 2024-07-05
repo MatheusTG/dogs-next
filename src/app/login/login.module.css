@@ -12,18 +12,22 @@
 
 .loginContent {
   margin-top: 20vh;
+  max-width: 64%;
   padding: 1rem;
 }
 
 .form {
   display: grid;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .lostPassword {
-  display: block;
-  margin-bottom: 4rem;
+  display: inline-block;
+  margin-bottom: 4.5rem;
+  color: #666;
+  line-height: 1;
+  border-bottom: 3px solid #666;
 }
 
 .registerContainer p {
@@ -60,7 +64,7 @@
   box-sizing: border-box;
   transition: 0.1s;
   width: max-content;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
 
 .buttonRegister:hover,
@@ -72,4 +76,16 @@
 .buttonRegister:disabled {
   opacity: 0.5;
   cursor: wait;
+}
+
+@media (max-width: 40rem) {
+  .login {
+    grid-template-columns: 1fr;
+  }
+  .loginContent {
+    margin-top: 20vh;
+  }
+  .imagemDog {
+    display: none;
+  }
 }

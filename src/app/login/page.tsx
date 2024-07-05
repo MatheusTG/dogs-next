@@ -2,8 +2,8 @@
 
 import useForm from "@/hooks/useForm";
 import styles from "./login.module.css";
-import Input from "@/components/Input";
-import Button from "@/components/Button";
+import Input from "@/components/Form/Input";
+import Button from "@/components/Form/Button";
 
 export default function LoginPage() {
   const user = useForm("email");
@@ -24,7 +24,7 @@ export default function LoginPage() {
         <div className={styles.registerContainer}>
           <h2 className={styles.formSubtitle}>Cadastre-se</h2>
           <p>Ainda não possui conta? Cadastre-se no site.</p>
-          <a className={styles.buttonRegister}>Cadastrar</a>
+          <a className={styles.buttonRegister}>Cadastro</a>
         </div>
       </div>
     </main>
