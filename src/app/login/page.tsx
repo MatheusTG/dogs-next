@@ -18,6 +18,14 @@ export default function LoginPage() {
           <Input label="Senha" id="password" />
           <Button type="submit">Entrar</Button>
         </form>
+
+        <a className={styles.lostPassword}>Perdeu a senha?</a>
+
+        <div className={styles.registerContainer}>
+          <h2 className={styles.formSubtitle}>Cadastre-se</h2>
+          <p>Ainda não possui conta? Cadastre-se no site.</p>
+          <a className={styles.buttonRegister}>Cadastrar</a>
+        </div>
       </div>
     </main>
   );
