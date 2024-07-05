@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={TypeSecond.variable}>
         <Header />
-        {children}
+        <main className="appBody">{children}</main>
         <Footer />
       </body>
     </html>
