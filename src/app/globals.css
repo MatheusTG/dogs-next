@@ -46,7 +46,8 @@ ul {
 }
 
 .mainContainer {
-  margin-top: 4rem;
+  margin-top: 2rem;
+  min-height: calc(100vh - 4rem);
 }
 
 .title {

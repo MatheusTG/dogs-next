@@ -4,8 +4,8 @@ export default async function FotoIdPage({
   params: { id: number };
 }) {
   return (
-    <main>
+    <section className="container mainContainer">
       <h1>{params.id}</h1>
-    </main>
+    </section>
   );
 }
