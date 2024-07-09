@@ -11,6 +11,62 @@
   background-size: cover;
 }
 
+.lostPassword {
+  display: inline-block;
+  margin-bottom: 4.5rem;
+  color: #666;
+  line-height: 1;
+  border-bottom: 3px solid #666;
+}
+
+.registerContainer p {
+  margin-bottom: 1.5rem;
+}
+
+.formSubtitle {
+  font-family: var(--type-second);
+  line-height: 1;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.formSubtitle::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #ddd;
+}
+
+.buttonRegister {
+  display: block;
+  font-size: 1rem;
+  font-family: var(--type-first);
+  cursor: pointer;
+  border-radius: 0.4rem;
+  background-color: #fb1;
+  color: #764701;
+  padding: 0.8rem 1.2rem;
+  box-sizing: border-box;
+  transition: 0.1s;
+  width: max-content;
+  margin-bottom: 3.5rem;
+}
+
+.buttonRegister:hover,
+.buttonRegister:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
+}
+
+.buttonRegister:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
 @media (max-width: 40rem) {
   .login {
     grid-template-columns: 1fr;
