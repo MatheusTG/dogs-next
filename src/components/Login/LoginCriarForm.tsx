@@ -4,10 +4,10 @@ import useForm from "@/hooks/useForm";
 import Input from "../Form/Input";
 import Button from "../Form/Button";
 import styles from "./LoginForm.module.css";
-import Login from "@/actions/Login";
 import { useFormState, useFormStatus } from "react-dom";
 import ErrorMessage from "../helper/ErrorMessage";
 import React from "react";
+import UserPost from "@/actions/UserPost";
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -15,21 +15,22 @@ function FormButton() {
     <>
       {pending ? (
         <Button type="submit" disabled={pending}>
-          Enviando...
+          Cadastrando...
         </Button>
       ) : (
         <Button type="submit" disabled={pending}>
-          Entrar
+          Cadastrar
         </Button>
       )}
     </>
   );
 }
 
-export default function LoginForm() {
+export default function LoginCriarForm() {
   const user = useForm();
   const password = useForm();
-  const [state, action] = useFormState(Login, {
+  const email = useForm("email");
+  const [state, action] = useFormState(UserPost, {
     ok: false,
     error: "",
     data: null,
@@ -48,6 +49,14 @@ export default function LoginForm() {
         value={user.value}
         onChange={user.onChange}
         onBlur={user.onBlur}
+      />
+      <Input
+        label="Email"
+        error={email.error}
+        id="email"
+        value={email.value}
+        onChange={email.onChange}
+        onBlur={email.onBlur}
       />
       <Input
         label="Senha"

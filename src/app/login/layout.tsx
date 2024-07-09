@@ -11,7 +11,7 @@ export default async function LoginLayout({
 }) {
   return (
     <section className={styles.login}>
-      {children}
+      <div className={`${styles.loginContent} animeLeft`}>{children}</div>
     </section>
   );
 }
