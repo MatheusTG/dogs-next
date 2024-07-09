@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import styles from "../login.module.css";
 import LoginCriarForm from "@/components/Login/LoginCriarForm";
 
 export const metadata: Metadata = {

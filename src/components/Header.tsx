@@ -31,7 +31,7 @@ export default function Header() {
             </div>
           </Link>
         ) : (
-          <Link href={"login"} className={styles.login}>
+          <Link href={"/login"} className={styles.login}>
             <span>Login / Criar</span>
             <div>
               <Image

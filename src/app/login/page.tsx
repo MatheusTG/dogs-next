@@ -14,12 +14,16 @@ export default function LoginPage() {
       <h1 className="title">Login</h1>
       <LoginForm />
 
-      <a className={styles.lostPassword}>Perdeu a senha?</a>
+      <Link href="/login/perdeu" className={styles.lostPassword}>
+        Perdeu a senha?
+      </Link>
 
       <div className={styles.registerContainer}>
         <h2 className={styles.formSubtitle}>Cadastre-se</h2>
         <p>Ainda não possui conta? Cadastre-se no site.</p>
-        <Link href="/login/criar" className="button">Cadastro</Link>
+        <Link href="/login/criar" className="button">
+          Cadastro
+        </Link>
       </div>
     </>
   );
