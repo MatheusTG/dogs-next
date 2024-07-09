@@ -1,7 +1,12 @@
 "use client";
 
-import Login from "@/components/Login/Login";
+import LoginForm from "@/components/Login/LoginForm";
 
 export default function LoginPage() {
-  return <Login />;
+  return (
+    <section className="animaLeft">
+      <h1 className="title">Login</h1>
+      <LoginForm />
+    </section>
+  );
 }

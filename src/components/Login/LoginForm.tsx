@@ -1,20 +1,20 @@
 import useForm from "@/hooks/useForm";
 import Input from "../Form/Input";
 import Button from "../Form/Button";
-import styles from "./Login.module.css";
+import styles from "./LoginForm.module.css";
+import Login from "@/actions/Login"
 
-export default function Login() {
+export default function LoginForm() {
   const user = useForm();
   const password = useForm();
 
   return (
     <div className={styles.loginContent}>
-      <h1 className="title">Login</h1>  
-      <form action="" className={styles.form}>
+      <form action={Login} className={styles.form}>
         <Input
           label="Usuário"
           error={user.error}
-          id="user"
+          id="username"
           value={user.value}
           onChange={user.onChange}
           onBlur={user.onBlur}
