@@ -6,6 +6,8 @@ import Button from "../Form/Button";
 import styles from "./LoginForm.module.css";
 import Login from "@/actions/Login";
 import { useFormState, useFormStatus } from "react-dom";
+import ErrorMessage from "../helper/ErrorMessage";
+import React from "react";
 
 function LoginButton() {
   const { pending } = useFormStatus();
@@ -33,6 +35,10 @@ export default function LoginForm() {
     data: null,
   });
 
+  React.useEffect(() => {
+    if (state.ok) window.location.href = "/conta";
+  }, [state.ok]);
+
   return (
     <form action={action} className={styles.form}>
       <Input
@@ -52,7 +58,7 @@ export default function LoginForm() {
         onBlur={password.onBlur}
       />
       <LoginButton />
-      <p>{state.error}</p>
+      {state.error && <ErrorMessage error={state.error} />}
     </form>
   );
 }

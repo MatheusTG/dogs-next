@@ -5,7 +5,7 @@ export default function Button({
   ...props
 }: React.ComponentProps<"button">) {
   return (
-    <button className={styles.button} {...props} >
+    <button className="button" {...props}>
       {children}
     </button>
   );

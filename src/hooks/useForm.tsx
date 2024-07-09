@@ -28,6 +28,8 @@ export default function useForm(type?: keyof typeof types | false) {
     if (inputValue.length === 0) {
       setError("Preencha um valor.");
       return false;
+    } else {
+      setError(null);
     }
     if (type === undefined) return true;
     else if (types[type] && !types[type].regex.test(inputValue)) {

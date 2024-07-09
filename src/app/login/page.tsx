@@ -5,7 +5,7 @@ import styles from "./login.module.css";
 
 export default function LoginPage() {
   return (
-    <section className="animaLeft">
+    <section className={`${styles.loginContent} animeLeft`}>
       <h1 className="title">Login</h1>
       <LoginForm />
 

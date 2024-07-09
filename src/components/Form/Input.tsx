@@ -1,10 +1,11 @@
 "use client";
 
+import ErrorMessage from "../helper/ErrorMessage";
 import styles from "./Input.module.css";
 
 type Props = React.ComponentProps<"input"> & {
   label: string;
-  error: string | null;
+  error?: string | null;
   id: string;
 };
 
@@ -21,7 +22,7 @@ export default function Input({ label, error, id, ...props }: Props) {
         name={id}
         {...props}
       />
-      {error && <p className={styles.error}>{error}</p>}
+      {error && <ErrorMessage error={error} />}
     </div>
   );
 }
