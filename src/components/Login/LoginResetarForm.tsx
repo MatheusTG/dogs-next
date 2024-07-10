@@ -7,7 +7,7 @@ import styles from "./LoginForm.module.css";
 import { useFormState, useFormStatus } from "react-dom";
 import ErrorMessage from "../helper/ErrorMessage";
 import React from "react";
-import PasswordLost from "@/actions/PasswordLost";
+import PasswordReset from "@/actions/PasswordReset";
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -15,51 +15,47 @@ function FormButton() {
     <>
       {pending ? (
         <Button type="submit" disabled={pending}>
-          Enviando...
+          Resetando...
         </Button>
       ) : (
         <Button type="submit" disabled={pending}>
-          Enviar Email
+          Resetar Senha
         </Button>
       )}
     </>
   );
 }
 
-// export const dynamic = "force-dynamic";
-
-export default function LoginPerdeuForm() {
-  const email = useForm();
-  const [state, action] = useFormState(PasswordLost, {
+export default function LoginResetarForm({
+  keyToken,
+  login,
+}: {
+  keyToken: string;
+  login: string;
+}) {
+  const password = useForm("password");
+  const [state, action] = useFormState(PasswordReset, {
     ok: false,
     error: "",
     data: null,
   });
 
-  const [url, setUrl] = React.useState("");
-
-  React.useEffect(() => {
-    setUrl(window.location.href.replace("perdeu", "resetar"));
-  }, []);
-
   return (
     <form action={action} className={styles.form}>
       <Input
-        label="Email / Usuário"
-        error={email.error}
-        id="login"
-        value={email.value}
-        onChange={email.onChange}
-        onBlur={email.onBlur}
+        label="Nova Senha"
+        error={password.error}
+        id="password"
+        type="password"
+        value={password.value}
+        onChange={password.onChange}
+        onBlur={password.onBlur}
       />
-      <input type="hidden" name="url" value={url} />
+      <input type="hidden" name="login" value={login} />
+      <input type="hidden" name="key" value={keyToken} />
 
-      {state.ok ? (
-        <p style={{ color: "#4c1" }}>Email enviado.</p>
-      ) : (
-        <FormButton />
-      )}
       {state.error && <ErrorMessage error={state.error} />}
+      <FormButton />
     </form>
   );
 }
