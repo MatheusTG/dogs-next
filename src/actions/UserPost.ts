@@ -2,9 +2,9 @@
 
 import { apiError } from "@/functions/apiError";
 import { USER_POST } from "@/functions/api";
-import Login from "./Login";
+import login from "./login";
 
-export default async function UserPost(state: {}, formData: FormData) {
+export default async function userPost(state: {}, formData: FormData) {
   const username = formData.get("username") as string | null;
   const email = formData.get("email") as string | null;
   const password = formData.get("password") as string | null;
@@ -19,7 +19,7 @@ export default async function UserPost(state: {}, formData: FormData) {
       body: formData,
     });
 
-    const { ok } = await Login({ ok: true }, formData);
+    const { ok } = await login({ ok: true }, formData);
     if (!ok) throw new Error("Error ao logar.");
 
     if (!response.ok) throw new Error("Email ou usuário já cadastrado.");

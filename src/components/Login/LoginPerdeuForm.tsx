@@ -7,7 +7,7 @@ import styles from "./LoginForm.module.css";
 import { useFormState, useFormStatus } from "react-dom";
 import ErrorMessage from "../helper/ErrorMessage";
 import React from "react";
-import PasswordLost from "@/actions/PasswordLost";
+import passwordLost from "@/actions/passwordLost";
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -30,7 +30,7 @@ function FormButton() {
 
 export default function LoginPerdeuForm() {
   const email = useForm();
-  const [state, action] = useFormState(PasswordLost, {
+  const [state, action] = useFormState(passwordLost, {
     ok: false,
     error: "",
     data: null,

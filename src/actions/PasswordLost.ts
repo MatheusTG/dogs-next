@@ -3,7 +3,7 @@
 import { apiError } from "@/functions/apiError";
 import { PASSWORD_LOST } from "@/functions/api";
 
-export default async function PasswordLost(state: {}, formData: FormData) {
+export default async function passwordLost(state: {}, formData: FormData) {
   const login = formData.get("login") as string | null;
   const urlPerdeu = formData.get("url") as string | null;
   

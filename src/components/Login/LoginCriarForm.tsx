@@ -7,7 +7,7 @@ import styles from "./LoginForm.module.css";
 import { useFormState, useFormStatus } from "react-dom";
 import ErrorMessage from "../helper/ErrorMessage";
 import React from "react";
-import UserPost from "@/actions/UserPost";
+import userPost from "@/actions/userPost";
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -30,7 +30,7 @@ export default function LoginCriarForm() {
   const user = useForm();
   const password = useForm();
   const email = useForm("email");
-  const [state, action] = useFormState(UserPost, {
+  const [state, action] = useFormState(userPost, {
     ok: false,
     error: "",
     data: null,

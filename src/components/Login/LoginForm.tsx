@@ -4,7 +4,7 @@ import useForm from "@/hooks/useForm";
 import Input from "../Form/Input";
 import Button from "../Form/Button";
 import styles from "./LoginForm.module.css";
-import Login from "@/actions/Login";
+import login from "@/actions/login";
 import { useFormState, useFormStatus } from "react-dom";
 import ErrorMessage from "../helper/ErrorMessage";
 import React from "react";
@@ -29,7 +29,7 @@ function FormButton() {
 export default function LoginForm() {
   const user = useForm();
   const password = useForm();
-  const [state, action] = useFormState(Login, {
+  const [state, action] = useFormState(login, {
     ok: false,
     error: "",
     data: null,

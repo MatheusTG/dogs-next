@@ -4,7 +4,7 @@ import { apiError } from "@/functions/apiError";
 import { PASSWORD_RESET } from "@/functions/api";
 import { redirect } from "next/navigation";
 
-export default async function PasswordReset(state: {}, formData: FormData) {
+export default async function passwordReset(state: {}, formData: FormData) {
   const login = formData.get("login") as string | null;
   const key = formData.get("key") as string | null;
   const password = formData.get("password") as string | null;

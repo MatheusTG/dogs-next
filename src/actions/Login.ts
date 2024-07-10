@@ -3,9 +3,8 @@
 import { apiError } from "@/functions/apiError";
 import { cookies } from "next/headers";
 import { TOKEN_POST } from "@/functions/api";
-import UserGet from "./UserGet";
 
-export default async function Login(state: {}, formData: FormData) {
+export default async function login(state: {}, formData: FormData) {
   const username = formData.get("username");
   const password = formData.get("password");
 

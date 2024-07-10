@@ -11,7 +11,7 @@ export type User = {
   nome: string;
 };
 
-export default async function UserGet() {
+export default async function userGet() {
   try {
     const token = cookies().get("token")?.value;
     if (!token) throw new Error("Token não encontrado.");

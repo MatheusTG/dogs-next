@@ -7,7 +7,7 @@ import styles from "./LoginForm.module.css";
 import { useFormState, useFormStatus } from "react-dom";
 import ErrorMessage from "../helper/ErrorMessage";
 import React from "react";
-import PasswordReset from "@/actions/PasswordReset";
+import passwordReset from "@/actions/passwordReset";
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -34,7 +34,7 @@ export default function LoginResetarForm({
   login: string;
 }) {
   const password = useForm("password");
-  const [state, action] = useFormState(PasswordReset, {
+  const [state, action] = useFormState(passwordReset, {
     ok: false,
     error: "",
     data: null,

@@ -1,11 +1,10 @@
 import Image from "next/image";
 import styles from "./Header.module.css";
 import Link from "next/link";
-import { USER_GET } from "@/functions/api";
-import UserGet from "@/actions/UserGet";
+import userGet from "@/actions/userGet";
 
 export default async function Header() {
-  const { data } = await UserGet();
+  const { data } = await userGet();
 
   return (
     <header className={`${styles.header}`}>

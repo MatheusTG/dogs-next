@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import { TypeSecond } from "../functions/fonts";
 import Footer from "@/components/Footer";
 import { UserContextProvider } from "@/context/UserContext";
-import UserGet from "@/actions/UserGet";
+import userGet from "@/actions/userGet";
 
 export const metadata: Metadata = {
   title: "Dogs Next",
@@ -16,7 +16,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { data: user } = await UserGet();
+  const { data: user } = await userGet();
 
   return (
     <html lang="pt-br">
