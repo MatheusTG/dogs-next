@@ -53,6 +53,7 @@ export default function LoginForm() {
         label="Senha"
         error={password.error}
         id="password"
+        type="password"
         value={password.value}
         onChange={password.onChange}
         onBlur={password.onBlur}
