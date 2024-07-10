@@ -46,7 +46,7 @@ export default function LoginResetarForm({
         label="Nova Senha"
         error={password.error}
         id="password"
-        type="password"
+        type="password  "
         value={password.value}
         onChange={password.onChange}
         onBlur={password.onBlur}

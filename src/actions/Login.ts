@@ -3,6 +3,7 @@
 import { apiError } from "@/functions/apiError";
 import { cookies } from "next/headers";
 import { TOKEN_POST } from "@/functions/api";
+import UserGet from "./UserGet";
 
 export default async function Login(state: {}, formData: FormData) {
   const username = formData.get("username");
@@ -17,7 +18,6 @@ export default async function Login(state: {}, formData: FormData) {
     });
 
     const data = await response.json();
-    console.log(data)
 
     if (!response.ok) throw new Error("Senha ou usuário inválidos.");
     cookies().set("token", data.token, {

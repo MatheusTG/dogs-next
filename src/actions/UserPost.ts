@@ -19,7 +19,6 @@ export default async function UserPost(state: {}, formData: FormData) {
       body: formData,
     });
 
-    const data = await response.json();
     const { ok } = await Login({ ok: true }, formData);
     if (!ok) throw new Error("Error ao logar.");
 
