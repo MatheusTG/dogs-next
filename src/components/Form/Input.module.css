@@ -1,15 +1,16 @@
 .label {
   display: block;
   margin-bottom: 0.5rem;
+  line-height: 1;
 }
 
 .input {
   display: block;
-  padding: 0.75rem;
+  padding: 0.8rem;
   line-height: 1rem;
   border-radius: 0.4rem;
   width: 100%;
-  border: 2px solid #eee;
+  border: 1px solid #eee;
   background-color: #eee;
   transition: 0.2s;
 }

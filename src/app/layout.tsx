@@ -23,7 +23,7 @@ export default async function RootLayout({
       <body className={TypeSecond.variable}>
         <UserContextProvider user={user}>
           <Header />
-          <main className="appBody mainContainer">{children}</main>
+          <main className="appBody">{children}</main>
           <Footer />
         </UserContextProvider>
       </body>
