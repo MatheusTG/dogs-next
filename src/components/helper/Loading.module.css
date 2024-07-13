@@ -1,0 +1,32 @@
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapperNoModal {
+  margin: auto;
+}
+
+.loading {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-left: 5px;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.wrapperNoModal .loading {
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.05);
+}
