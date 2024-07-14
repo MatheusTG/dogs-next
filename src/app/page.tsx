@@ -5,7 +5,7 @@ export default async function Home() {
   const { data: photos } = await photosGet();
 
   return (
-    <section className="container mainContainer">
+    <section className="container mainContainer" style={{paddingTop: '1rem'}}>
       {photos && <Feed photos={photos} />}
     </section>
   );
