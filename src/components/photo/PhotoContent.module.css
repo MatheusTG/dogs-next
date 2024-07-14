@@ -40,7 +40,7 @@
   grid-row: 1;
   border-radius: 0.4rem;
   overflow: hidden;
-} 
+}
 
 @media (max-width: 64rem) {
   .photo {
@@ -67,12 +67,12 @@
 }
 
 .visualizacoes::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 16px;
   height: 10px;
   margin-right: 0.5rem;
-  background: url('/assets/visualizacao-black.svg');
+  background: url("/assets/visualizacao-black.svg");
 }
 
 .attributes {
@@ -88,7 +88,7 @@
 }
 
 .attributes li::before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 20px;
   margin-right: 0.5rem;

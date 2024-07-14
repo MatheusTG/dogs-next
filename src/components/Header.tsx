@@ -19,7 +19,7 @@ export default async function Header() {
           />
         </Link>
         {data ? (
-          <Link href={"conta"} className={styles.login}>
+          <Link href={"/conta"} className={styles.login}>
             <span>{data.username}</span>
             <div>
               <Image
