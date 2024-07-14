@@ -13,7 +13,7 @@ type Props = {
   comments: Comment[];
 };
 
-const PhotoComments = (props: Props) => {
+export default function PhotoComments(props: Props) {
   const [comments, setComments] = React.useState(() => props.comments);
   const commentsSection = React.useRef<HTMLUListElement>(null);
 
@@ -47,6 +47,4 @@ const PhotoComments = (props: Props) => {
       )}
     </>
   );
-};
-
-export default PhotoComments;
+}

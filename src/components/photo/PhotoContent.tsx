@@ -2,20 +2,20 @@
 
 import React from "react";
 import styles from "./PhotoContent.module.css";
-import PhotoComments from './PhotoComments';
+import PhotoComments from "./PhotoComments";
 import PhotoDelete from "./PhotoDelete";
 import Link from "next/link";
 import { useUser } from "@/context/UserContext";
 import Image from "next/image";
 import { PhotoData } from "@/actions/photoGet";
 
-const PhotoContent = ({
+export default function PhotoContent({
   data,
   single,
 }: {
   data: PhotoData;
   single: boolean;
-}) => {
+}) {
   const { user } = useUser();
   const { photo, comments } = data;
   return (
@@ -46,6 +46,4 @@ const PhotoContent = ({
       <PhotoComments single={single} id={photo.id} comments={comments} />
     </div>
   );
-};
-
-export default PhotoContent;
+}
