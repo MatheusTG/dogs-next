@@ -3,7 +3,6 @@
   grid-template-columns: 36rem 20rem;
   grid-template-rows: auto 1fr auto;
   margin: auto;
-  padding-top: 1rem;
   height: 36rem;
   border-radius: 0.2rem;
   background-color: white;
@@ -16,6 +15,7 @@
 .single.photo {
   grid-template-columns: 1fr;
   height: auto;
+  padding-top: 1rem;
 }
 
 @keyframes scaleUp {

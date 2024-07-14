@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import styles from "./PhotoContent.module.css";
 import PhotoComments from "./PhotoComments";
 import PhotoDelete from "./PhotoDelete";
 import Link from "next/link";
 import { useUser } from "@/context/UserContext";
 import Image from "next/image";
 import { PhotoData } from "@/actions/photoGet";
+import styles from "./PhotoContent.module.css";
 
 export default function PhotoContent({
   data,
